@@ -1,0 +1,51 @@
+table order			
+-nama_order
+-jumlah
+-satuan
+-id_cust
+-tanggal_masuk
+-deadline
+-id_bahan
+-jenis_jahit
+-keterangan
+-id_pekerjaan [array]
+-dp
+-tanggal_dp
+-total
+-sisa_pelunasan [total-dp]
+-id_progress
+-lunas [boolean]
+
+table cust
+-nama_cust
+
+table bahan
+-kode_barang [unique,customizable]
+-nama_barang
+-satuan
+-stok_awal
+-total_masuk
+-total_keluar
+-stok_akhir
+-status
+-tanggal_masuk
+
+table pekerjaan
+-item
+-fee
+-jumlah_item
+-jumlah_nominal [fee * jumlah_item]
+
+table progress
+-id_order
+-desain
+-setting
+-print
+-press
+-potong
+-qc_potong
+-jahit
+-qc_finish
+
+
+
