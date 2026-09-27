@@ -18,8 +18,10 @@ table order
 
 table cust
 -nama_cust
+-no_hp
+-jumlah_pesanan [otomtis base on order]
 
-table bahan
+table bahan (sum)
 -kode_barang [unique,customizable]
 -nama_barang
 -satuan
@@ -28,13 +30,19 @@ table bahan
 -total_keluar
 -stok_akhir
 -status
--tanggal_masuk
+
+table bahan_keluarmasuk
+-id_bahan (table bahan)
+-tanggal
+
 
 table pekerjaan
+-id_bulan
 -item
 -fee
 -jumlah_item
 -jumlah_nominal [fee * jumlah_item]
+
 
 table progress
 -id_order
@@ -46,6 +54,5 @@ table progress
 -qc_potong
 -jahit
 -qc_finish
-
 
 
